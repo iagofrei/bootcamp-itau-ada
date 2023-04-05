@@ -4,13 +4,15 @@ defaults:
   run:
     working-directory: "frontend/"
 
-on:
-  # workflow_dispatch:
-  push:
-    branches:
-    - frontend
-    paths:
-    - 'frontend/**'
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#     - frontend
+#     paths:
+#     - 'frontend/**'
+
+on: [push]
 
 jobs:
   Teste:
