@@ -30,8 +30,5 @@ jobs:
           cd app/
           apt-get update && apt-get -y install npm
           npm install -g @angular/cli
-
-      - name: Test execution
-        run: |
-          cd app/
           ng test
+
