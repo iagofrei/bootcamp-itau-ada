@@ -29,9 +29,11 @@ jobs:
         
       - name: Getting dependencies
         run: |
-          cd app/src/
+          cd app/
           apt-get update && apt-get -y install npm
           npm install -g @angular/cli
         
       - name: Test execution
-        run: ng test
+        run: |
+          cd src/
+          ng test
