@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches:
+    - main
     - backend
     paths:
     - '.github/workflows/backend-ci.yml'
@@ -41,7 +42,7 @@ jobs:
 
     - name: Build Backend Dockerfile
       run: docker build . --tag backend-app:latest
-      
+
     - name: Tag Backend Docker image
       run: docker tag backend-app:latest ${{ env.REGISTRY }}/${{ env.USER }}/backend-app:latest
 
