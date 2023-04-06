@@ -2,15 +2,17 @@ name: Teste frontend
 
 defaults:
   run:
-    working-directory: "frontend/"
+    working-directory: "frontend/app"
 
-on:
-  # workflow_dispatch:
-  push:
-    branches:
-    - frontend
-    paths:
-    - 'frontend/**'
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#     - frontend
+#     paths:
+#     - 'frontend/**'
+
+on: [push]
 
 jobs:
   Teste:
@@ -27,7 +29,5 @@ jobs:
         
       - name: Getting dependencies
         run: |
-          cd app/src/
           apt-get update && apt-get -y install npm
           npm install -g @angular/cli
-          ng test
