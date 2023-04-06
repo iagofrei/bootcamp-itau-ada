@@ -4,15 +4,13 @@ defaults:
   run:
     working-directory: "frontend/app"
 
-# on:
-#   workflow_dispatch:
-#   push:
-#     branches:
-#     - frontend
-#     paths:
-#     - 'frontend/**'
-
-on: [push]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - frontend
+    paths:
+    - '.github/workflows/frontend-ci.yml'
 
 jobs:
   Teste:
