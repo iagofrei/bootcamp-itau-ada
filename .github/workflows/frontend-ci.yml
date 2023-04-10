@@ -48,11 +48,17 @@ jobs:
           password: ${{ env.GH_TOKEN }}
 
       - name: Build Frontend Dockerfile
-        run: docker build . --tag frontend-app:latest
+        run: |
+          cd ..
+          docker build . --tag frontend-app:latest
 
       - name: Tag Frontend Docker image
-        run: docker tag frontend-app:latest ${{ env.REGISTRY }}/${{ env.USER }}/frontend-app:latest
+        run: |
+          cd ..
+          docker tag frontend-app:latest ${{ env.REGISTRY }}/${{ env.USER }}/frontend-app:latest
 
       - name: Push Frontend Docker image
-        run:  docker push ${{ env.REGISTRY }}/${{ env.USER }}/frontend-app:latest
+        run: |
+          cd ..
+          docker push ${{ env.REGISTRY }}/${{ env.USER }}/frontend-app:latest
 
