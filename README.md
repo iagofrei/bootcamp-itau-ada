@@ -1,3 +1,28 @@
+# Informações sobre a execução do projeto
+
+1 - Foi feito o arquivo do backend-ci.yml na branch backend, eu já fiz o pull request pra main
+
+2 - Após isso eu criei a branch frontend e fiz o arquivo do frontend-ci.yml
+
+3 - As actions do backend e do frontend só irão ser executadas quando o pull request for feito para a main
+
+4 - A action do backend executa com sucesso, porem a do frontend trava na parte do ng test
+
+---------------------
+
+## Grupo 03
+
+| Participantes | Repositório do Git |
+| ----------- | ----------- |
+| Iago Gardinalli de Freitas | https://github.com/iagofrei/bootcamp-itau-ada |
+| Luiz Guilherme de Oliveira Lopes | https://github.com/luizlopes/bootcamp-itau-ada |
+| Melissa Hipolito Nojima | https://github.com/melhipolito/bootcamp-itau-ada |
+| Rodrigo Ruiz Climaco Pereira | https://github.com/isendel-1/bootcamp-itau-ada |
+
+
+------
+
+
 ## Bootcamp Itaú | Projeto do módulo [DE-OP-010] PIPELINES DE CI E CD
 
 ### Cenário:
