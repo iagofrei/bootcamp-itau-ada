@@ -30,9 +30,6 @@ jobs:
         with:
           node-version: '14'
         
-      - name: Getting dependencies
-        run: apt-get update && apt-get -y install npm
-
       - name: Install angular cli
         run: npm install -g @angular/cli
 
