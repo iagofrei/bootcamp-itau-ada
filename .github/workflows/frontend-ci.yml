@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - frontend
+    - main
     paths:
     - '.github/workflows/frontend-ci.yml'
 
