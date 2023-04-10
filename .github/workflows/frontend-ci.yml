@@ -31,10 +31,13 @@ jobs:
           node-version: '14'
         
       - name: Getting dependencies
-        run: |
-          apt-get update && apt-get -y install npm
-          npm install -g @angular/cli
-          ng test
+        run: apt-get update && apt-get -y install npm
+
+      - name: Install angular cli
+        run: npm install -g @angular/cli
+
+      - name: Run test
+        run: ng test
 
       - name: Log into registry ${{ env.REGISTRY }}
         uses: docker/login-action@v2
